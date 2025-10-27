@@ -1,0 +1,10 @@
+.timeContainer {
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  padding-right: 15%;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: auto;
+  min-height: 100vh;
+}
