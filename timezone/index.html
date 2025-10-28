@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
     <title>TimeZone</title>
 </head>
 <body>
     <div class="timeContainer">
-        <p id="Timezone">Timezone Atual</p>
+        <!-- <p id="Timezone">Timezone Atual</p> -->
+         <label for="timezones">Escolha um fuso-horário:</label>
+         <select name="timezones" id="timezones">
+            <option value="America/Sao_Paulo">São Paulo</option>
+            <option value="Asia/Tokyo">Tokyo</option>
+            <option value="Europe/Monaco">Monaco</option>
+            <option value="Europe/Berlin">Berlim</option>
+         </select>
         <h1 id="currentHour">Horário Atual</h1>
         <p id="currentDate">Data</p>
     </div>

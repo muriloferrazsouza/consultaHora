@@ -7,16 +7,13 @@ import advancedFormat from 'dayjs/plugin/advancedFormat';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-const hour = document.querySelector('#currentHour');
-const date = document.querySelector('#currentDate');
-const timearea = document.querySelector('#Timezone');
-
-
-
 setInterval(() => {
-    timearea.textContent = userTimezone;
-    hour.textContent = dayjs().format('HH:mm:ss');
-    date.textContent = dayjs().format('DD/MM/YYYY');
+    const hour = document.querySelector('#currentHour');
+    const date = document.querySelector('#currentDate');
+    const userTimezone = document.querySelector('#timezones').value;
+    const today = dayjs();
+    const d2 = dayjs.utc(today).tz(userTimezone);
+    hour.textContent = d2.format('HH:mm:ss');
+    date.textContent = d2.format('DD/MM/YYYY');
 
 }, 1000);
